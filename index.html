@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="VALERO OÑATE BRYAN ALEXANDER">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="index.js"></script>
+    <title>Inicio - EventaPro</title>
+    <style>
+        /* Estilos para la ventana emergente */
+        #mensaje-exito {
+            position: fixed;
+            top: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px;
+            font-weight: bold;
+            border-radius: 5px;
+            display: none;
+            z-index: 1000;
+            width: 80%;
+            text-align: center;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>EventaPro</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="bienvenida tarjeta">
+            <h3>¡Bienvenidos a EventaPro!</h3>
+            <p>Somos una plataforma diseñada para conectar a pequeñas empresas de eventos con clientes en busca de experiencias únicas. Desde salones de lujo hasta servicios de animación y decoración, aquí encontrarás todo lo necesario para crear momentos inolvidables.</p>
+        </section>
+        <section class="quienes-somos tarjeta">
+            <h3>Quiénes Somos</h3>
+            <p>En EventaPro trabajamos junto a empresas comprometidas con la excelencia y creatividad, ofreciendo una amplia gama de servicios personalizados para cada ocasión. Nos apasiona ayudar a nuestros clientes a hacer realidad sus sueños, un evento a la vez.</p>
+        </section>
+        <section class="servicios-destacados tarjeta">
+            <h3>Servicios Destacados</h3>
+            <ul>
+                <li>Salones: Espacios elegantes para eventos grandes y pequeños.</li>
+                <li>Música en Vivo: Desde bandas hasta DJs, para todos los estilos.</li>
+                <li>Decoración Temática: Personaliza tu evento con estilos únicos y vibrantes.</li>
+            </ul>
+        </section>
+        <section class="carrusel tarjeta">
+            <h3>Carrusel de Imágenes</h3>
+            <div class="carrusel-container">
+                <div class="carrusel-imagen">
+                    <img src="https://i.pinimg.com/564x/05/a6/dd/05a6dd621300186c8b79fc343894ef40.jpg" alt="Evento Empresarial">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="https://i.pinimg.com/564x/fb/cb/0f/fbcb0fbcd133cfa3fe961af744c89d3f.jpg" alt="Evento Sobrio">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="https://i.pinimg.com/564x/c9/9f/f3/c99ff329966868aa385995621bf51a3c.jpg" alt="Evento Corporativo">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="https://i.pinimg.com/564x/95/c7/af/95c7af59a362381d210b270fb630b47d.jpg" alt="Evento de 15 Años">
+                </div>
+                <div class="carrusel-imagen">
+                    <img src="https://i.pinimg.com/564x/d4/6d/cb/d46dcb1cbe2dd4df9c3366c6b43387c9.jpg" alt="Evento Formal">
+                </div>
+            </div>
+        </section>
+        <section class="testimonios tarjeta">
+            <h3>Testimonios</h3>
+            <blockquote>
+                <p><strong>Ana Gómez - Boda en el Jardín Botánico</strong></p>
+                <p>“Nuestra boda en el Jardín Botánico fue un sueño hecho realidad. ¡Gracias a EventaPro, tuvimos la boda de nuestros sueños!”</p>
+            </blockquote>
+        </section>
+
+        <!-- Formulario de contacto -->
+        <section class="contacto tarjeta">
+            <h3>Contáctanos</h3>
+            <p>¿Tienes alguna consulta o comentario? ¡Nos encantaría saber de ti!</p>
+            <form id="contacto-form">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre completo" required><br><br>
+                
+                <label for="apellido">Apellido:</label>
+                <input type="text" id="apellido" name="apellido" placeholder="Tu apellido" required><br><br>
+
+                <label for="provincia">Provincia:</label>
+                <select id="provincia" name="provincia" required>
+                    <option value="">Selecciona tu provincia</option>
+                    <!-- Aquí irían las provincias -->
+                    <option value="Azuay">Azuay</option>
+                    <option value="Bolívar">Bolívar</option>
+                    <option value="Cañar">Cañar</option>
+                    <option value="Carchi">Carchi</option>
+                    <option value="Chimborazo">Chimborazo</option>
+                    <option value="Cotopaxi">Cotopaxi</option>
+                    <option value="El Oro">El Oro</option>
+                    <option value="Esmeraldas">Esmeraldas</option>
+                    <option value="Galápagos">Galápagos</option>
+                    <option value="Guayas">Guayas</option>
+                    <option value="Imbabura">Imbabura</option>
+                    <option value="Loja">Loja</option>
+                    <option value="Los Ríos">Los Ríos</option>
+                    <option value="Manabí">Manabí</option>
+                    <option value="Morona Santiago">Morona Santiago</option>
+                    <option value="Napo">Napo</option>
+                    <option value="Orellana">Orellana</option>
+                    <option value="Pastaza">Pastaza</option>
+                    <option value="Pichincha">Pichincha</option>
+                    <option value="Santa Elena">Santa Elena</option>
+                    <option value="Santo Domingo de los Tsáchilas">Santo Domingo de los Tsáchilas</option>
+                    <option value="Sucumbíos">Sucumbíos</option>
+                    <option value="Tungurahua">Tungurahua</option>
+                    <option value="Zamora-Chinchipe">Zamora-Chinchipe</option>
+                    <!-- Añadir las demás provincias -->
+                </select><br><br>
+
+                <label>Género:</label>
+                <div class="genero">
+                    <input type="radio" id="masculino" name="genero" value="Hombre" required>
+                    <label for="masculino">Hombre</label>    
+                    <input type="radio" id="femenino" name="genero" value="Mujer">
+                    <label for="femenino">Mujer</label>
+                </div>
+
+                <label for="mensaje">Mensaje:</label>
+                <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea><br><br>
+
+                <!-- Botón para abrir las políticas de uso -->
+                <button type="button" id="btn-politicas">Políticas de uso</button>
+
+                <!-- Checkbox para aceptar las políticas de uso -->
+                <label>
+                    <input type="checkbox" id="politicas" required> Acepto las políticas de uso
+                </label><br><br>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </section>
+
+        <!-- Modal para las políticas de uso -->
+        <div id="modal-politicas" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <h3>Políticas de Uso</h3>
+                <!-- Aquí se pueden agregar más detalles de las políticas -->
+                <div class="politica-container">
+                    <p><strong>Fecha de entrada en vigor: 22 de noviembre de 2024</strong></p>
+    
+                    <h2>1. Acceso al sitio web</h2>
+                    <p>El acceso a <strong>EventaPro</strong> es libre y gratuito, pero algunos servicios pueden requerir registro o suscripción. Para acceder a ciertas funcionalidades, como realizar reservas o ponerte en contacto con nuestros proveedores, es posible que se te solicite información personal. Te comprometes a proporcionar información exacta, veraz y actualizada.</p>
+    
+                    <h2>2. Responsabilidad del usuario</h2>
+                    <p>Como usuario, eres el único responsable del uso que hagas de este sitio web y de la información que compartas en él. Aceptas no utilizar <strong>EventaPro</strong> para:</p>
+                    <ul>
+                        <li>Realizar actividades ilegales o fraudulentas.</li>
+                        <li>Publicar contenidos difamatorios, obscenos, ofensivos o que infrinjan los derechos de terceros.</li>
+                        <li>Introducir virus o cualquier otro código malicioso que pueda dañar la integridad del sitio o la seguridad de los usuarios.</li>
+                        <li>Realizar prácticas que puedan alterar el normal funcionamiento del sitio web.</li>
+                    </ul>
+    
+                    <h2>3. Propiedad intelectual</h2>
+                    <p>El contenido de <strong>EventaPro</strong>, incluyendo pero no limitado a textos, imágenes, logos, gráficos, videos y diseño, está protegido por las leyes de propiedad intelectual. Ningún material de este sitio puede ser copiado, distribuido, modificado, reproducido o transmitido sin el consentimiento previo y por escrito de <strong>EventaPro</strong>.</p>
+    
+                    <h2>4. Datos personales y privacidad</h2>
+                    <p>Al utilizar <strong>EventaPro</strong>, te comprometes a proporcionar datos personales verídicos y completos. Estos datos serán tratados de acuerdo con nuestra <a href="#">Política de Privacidad</a>, la cual se encuentra disponible en el sitio web. Nos comprometemos a proteger la privacidad de tus datos y no compartirlos con terceros sin tu consentimiento, salvo en los casos previstos por la ley.</p>
+    
+                    <h2>5. Limitación de responsabilidad</h2>
+                    <p><strong>EventaPro</strong> no será responsable de los daños o perjuicios directos o indirectos derivados del uso del sitio, incluyendo fallos en el sistema, pérdida de datos o información, o daños derivados de enlaces a otros sitios web que no están bajo nuestro control.</p>
+    
+                    <h2>6. Modificaciones de la política</h2>
+                    <p><strong>EventaPro</strong> se reserva el derecho de modificar, actualizar o cambiar esta Política de Uso en cualquier momento. Las modificaciones entrarán en vigor en el momento en que sean publicadas en el sitio web. Se recomienda revisar esta política periódicamente para estar al tanto de cualquier cambio.</p>
+    
+                    <h2>7. Aceptación de las condiciones</h2>
+                    <p>Al utilizar nuestros servicios, el usuario acepta cumplir con los términos de esta Política de Uso. Si no estás de acuerdo con estos términos, te invitamos a que no utilices este sitio web.</p>
+                </div>                      
+            </div>
+        </div>
+
+    </main>
+
+    <!-- Mensaje de éxito -->
+    <div id="mensaje-exito">¡Enviado exitoso!</div>
+
+    <script>
+        // Mostrar el modal de políticas de uso cuando se hace clic en el botón
+        document.getElementById("btn-politicas").onclick = function() {
+            document.getElementById("modal-politicas").style.display = "block";
+        }
+
+        // Cerrar el modal
+        document.querySelector(".close").onclick = function() {
+            document.getElementById("modal-politicas").style.display = "none";
+        }
+
+        // Cerrar el modal si se hace clic fuera de él
+        window.onclick = function(event) {
+            if (event.target == document.getElementById("modal-politicas")) {
+                document.getElementById("modal-politicas").style.display = "none";
+            }
+        }
+
+        // Mostrar el mensaje de éxito después de enviar el formulario
+        document.getElementById('contacto-form').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evitar el envío del formulario
+            document.getElementById('mensaje-exito').style.display = 'block';
+
+            // Ocultar el mensaje después de 3 segundos
+            setTimeout(function() {
+                document.getElementById('mensaje-exito').style.display = 'none';
+            }, 3000);
+        });
+    </script>
+</body>
+</html>

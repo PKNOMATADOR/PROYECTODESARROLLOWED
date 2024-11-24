@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="LINO BARRETO EDISON EDUARDO">
+    <link rel="stylesheet" href="galeria.css">
+    <link rel="stylesheet" href="estilos.css">
+    <title>Galería - EventaPro</title>
+</head>
+<body>
+    <header>
+        <h1>Galería de Eventos</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="galeria">
+            <h2>Imágenes de Eventos</h2>
+            <p>Descubre algunos de los eventos más memorables que hemos ayudado a organizar. ¡Inspírate para tu próxima celebración!</p>
+            <div class="grid-galeria">
+                <!-- Primera fila -->
+                <div class="tarjeta">
+                    <img src="https://i.pinimg.com/564x/15/a1/87/15a1874f7089d0b6c0d4931c68087f88.jpg" alt="Boda en Jardín Botánico">
+                    <p>Boda en Jardín Botánico</p>
+                </div>  
+                <div class="tarjeta">
+                    <img src="https://i.pinimg.com/564x/8d/22/a1/8d22a11f3e3e9ca9f6dcbeeb12b392fb.jpg" alt="Evento Corporativo en Salón Verde">
+                    <p>Evento Corporativo en Salón Verde</p>
+                </div>   
+                <div class="tarjeta">
+                    <img src="https://i.pinimg.com/564x/27/cd/01/27cd01cfdd16df9112a36b7f525ebafd.jpg" alt="Fiesta Infantil con Animación">
+                    <p>Fiesta Infantil con Animación</p>
+                </div>
+                <!-- Segunda fila -->
+                <div class="tarjeta">
+                    <img src="https://i.pinimg.com/736x/cb/43/fd/cb43fd8b29912eb766014649fdcbe1d8.jpg" alt="Cumpleaños Temático en Playa">
+                    <p>Cumpleaños Temático en Playa</p>
+                </div>  
+                <div class="tarjeta">
+                    <img src="https://i.pinimg.com/564x/29/8e/85/298e85c19110feda3c8c3740a98cfa86.jpg" alt="Conferencia Internacional">
+                    <p>Conferencia Internacional</p>
+                </div>
+                <div class="tarjeta">
+                    <img src="https://i.pinimg.com/564x/60/f8/73/60f873378dd8ba555e923ed87629650c.jpg" alt="Boda en la Playa">
+                    <p>Boda en la Playa</p>
+                </div>
+                <!-- Tercera fila -->
+                <div class="tarjeta">  
+                    <img src="https://i.pinimg.com/564x/44/c1/aa/44c1aaf51744d0b9a40518967a973a84.jpg" alt="Feria de Gastronomía">
+                    <p>Feria de Gastronomía</p>
+                </div> 
+                <div class="tarjeta">
+                    <img src="https://i.pinimg.com/564x/58/ae/2f/58ae2fdd163e1a1ab520b35d8e9688a0.jpg" alt="Festival de Música al Aire Libre">
+                    <p>Festival de Música al Aire Libre</p>
+                </div>   
+                <div class="tarjeta">
+                    <img src="https://i.pinimg.com/564x/ca/b1/57/cab157429e250675971c31dc4b162bdb.jpg" alt="Reunión Familiar">
+                    <p>Reunión Familiar</p>
+                </div>  
+            </div>
+        </section>
+        <section class="formulario-reserva">
+            <h2>Reserva tu Evento</h2>
+            <!-- Mensaje de confirmación -->
+            <div class="mensaje-confirmacion" id="mensaje-confirmacion">
+                ¡Reserva enviada con éxito! Nos pondremos en contacto contigo pronto.
+            </div>
+            <form id="form-reserva">
+                <label for="nombre">Nombre completo:</label>
+                <input type="text" id="nombre" name="nombre" placeholder="Tu nombre aquí" required>
+
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" placeholder="Tu correo aquí" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" placeholder="0987654321" pattern="[0-9]{10}" required>
+
+                <label for="tipo-evento">Tipo de evento:</label>
+                <select id="tipo-evento" name="tipo-evento" required>
+                    <option value="">Selecciona uno</option>
+                    <option value="boda">Boda</option>
+                    <option value="cumpleaños">Cumpleaños</option>
+                    <option value="corporativo">Corporativo</option>
+                    <option value="otros">Otros</option>
+                </select>
+
+                <label for="invitados">Número de invitados:</label>
+                <input type="number" id="invitados" name="invitados" min="10" placeholder="Cantidad de invitados" required>
+
+                <label for="notas">Notas adicionales:</label>
+                <textarea id="notas" name="notas" rows="4" placeholder="Detalles adicionales..."></textarea>
+
+                <button type="submit">Enviar Reserva</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 EventaPro. Todos los derechos reservados.</p>
+    </footer>
+    <script>
+        // Seleccionar el formulario y el mensaje de confirmación
+        const formReserva = document.getElementById('form-reserva');
+        const mensajeConfirmacion = document.getElementById('mensaje-confirmacion');
+
+        // Escuchar el evento de envío del formulario
+        formReserva.addEventListener('submit', function (e) {
+            e.preventDefault(); // Evitar que la página se recargue
+
+            // Mostrar el mensaje de confirmación
+            mensajeConfirmacion.style.display = 'block';
+
+            // Opcional: Limpiar los campos del formulario
+            formReserva.reset();
+
+            // Ocultar el mensaje después de unos segundos (opcional)
+            setTimeout(() => {
+                mensajeConfirmacion.style.display = 'none';
+            }, 5000); // Ocultar después de 5 segundos
+        });
+    </script>
+</body>
+</html>

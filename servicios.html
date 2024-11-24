@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="MENDOZA COLOMA PIERO ANTONIO">
+    <link rel="stylesheet" href="estilos.css">
+    <script src="servicios.js"></script>
+
+
+    <title>Servicios - EventaPro</title>
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Servicios</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios.html">Servicios</a></li>
+                <li><a href="galeria.html">Galería</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section class="servicios">
+            <h2>Catálogo Completo</h2>
+            <p>Descubre los servicios que ofrecemos para hacer de tu evento una experiencia inolvidable.</p>
+            <div class="grid-container">
+                <!-- Tarjeta de Salones -->
+                <div class="tarjeta servicio-salon">
+                    <h3>Salones</h3>
+                    <div class="imagenes-salon">
+                        <img src="https://i.pinimg.com/564x/4f/fa/a2/4ffaa2045a972771c965d32c6304e0ba.jpg" alt="Salón 1">
+                        <img src="https://i.pinimg.com/564x/3c/05/f1/3c05f1ae3c798723bc7a4d2d11cb6501.jpg" alt="Salón 2">
+                        <img src="https://i.pinimg.com/564x/c3/97/c8/c397c8357566e6a12a0fe7ee0f9c8e88.jpg" alt="Salón 3">
+                        <img src="https://i.pinimg.com/564x/bc/c7/5c/bcc75c74664cb19e11b87f8b1b5e2a74.jpg" alt="Salón 4">
+                    </div>
+                    <p>Salones adaptados para cualquier evento, con capacidad desde 20 hasta 500 personas, equipados con tecnología audiovisual.</p>
+                    <button class="btn" onclick="mostrarDetalles('salon')">Más detalles</button>
+                    <button class="btn" onclick="agregarAlPedido('Salón')">Agregar al pedido</button>
+                    
+                    <!-- Detalles adicionales de Salón -->
+                    <div id="salon-detalles" style="display: none;">
+                        <p><strong>Capacidad:</strong> Desde 20 hasta 500 personas.</p>
+                        <p><strong>Precios:</strong> Desde $200 por 4 horas.</p>
+                        <p><strong>Servicios incluidos:</strong> Proyector, sonido, y luces.</p>
+                        <p><strong>Opciones adicionales:</strong> Catering, decoración temática, y más.</p>
+                        <p><strong>Descripción:</strong> Salones modernos con un diseño versátil, ideales para bodas, conferencias, y eventos corporativos.</p>
+                          </div>                        
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Decoración -->
+                <div class="tarjeta servicio-decoracion">
+                    <h3>Decoración</h3>
+                    <div class="imagenes-decoracion">
+                        <img src="https://i.pinimg.com/736x/70/43/3f/70433f9fb9ad709259c948825d32500f.jpg" alt="Decoración 1">
+                        <img src="https://i.pinimg.com/564x/84/24/99/8424995c520956fe1d0213e3eb9fde76.jpg" alt="Decoración 2">
+                    </div>
+                    <p>Decoración temática y personalizada que transforma cualquier espacio en un ambiente único y especial.</p>
+                    <button class="btn" onclick="mostrarDetalles('decoracion')">Más detalles</button>
+                    <button class="btn" onclick="agregarAlPedido('Decoración')">Agregar al pedido</button>
+                    <div id="tarjeta-servicio-decoracion" style="display: none;">
+                    </div>   
+                    <!-- Detalles adicionales de Decoración -->
+                    <div id="decoracion-detalles" style="display: none;">
+                        <p><strong>Tipos de decoración:</strong> Floral, vintage, moderna, y más.</p>
+                        <p><strong>Precios:</strong> Desde $150 dependiendo del tamaño del evento.</p>
+                        <p><strong>Ejemplos:</strong> Hemos decorado para bodas, fiestas de empresa, y eventos temáticos.</p>
+                        <p><strong>Descripción:</strong> Personalización total de acuerdo con tus gustos y necesidades.</p>
+                    </div>
+                </div>
+
+                <!-- Tarjeta de Animación -->
+                <div class="tarjeta servicio-animacion">
+                    <h3>Animación</h3>
+                    <div class="imagenes-animacion">
+                        <img src="https://i.pinimg.com/564x/de/a5/2a/dea52a3c5746095ab3c4ed8c3194c66b.jpg" alt="Animación 1">
+                        <img src="https://i.pinimg.com/736x/07/ab/22/07ab22981231bd8529b4d31a453f8bde.jpg" alt="Animación 2">
+                    </div>
+                    <p>Entretenimiento garantizado con nuestros animadores y DJs, perfectos para todo tipo de celebraciones.</p>
+                    <button class="btn" onclick="mostrarDetalles('animacion')">Más detalles</button>
+                    <button class="btn" onclick="agregarAlPedido('Animación')">Agregar al pedido</button>
+                    
+                    <!-- Detalles adicionales de Animación -->
+                    <div id="animacion-detalles" style="display: none;">
+                        <p><strong>Opciones:</strong> DJs, animadores, shows en vivo.</p>
+                        <p><strong>Precios:</strong> Desde $300 por 4 horas de entretenimiento.</p>
+                        <p><strong>Descripción:</strong> Ofrecemos entretenimiento variado, ideal para cualquier tipo de evento.</p>
+                    </div>
+                </div>
+
+                <!-- Actualización en la tarjeta de Música -->
+                <div class="tarjeta servicio-musica">
+                <h3>Música</h3>
+                <div class="imagenes-musica">
+                <img src="https://scontent.fgye1-2.fna.fbcdn.net/v/t39.30808-6/362274605_807503367707509_3571026703450672388_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=NgW2v8bRULEQ7kNvgH7iXjg&_nc_zt=23&_nc_ht=scontent.fgye1-2.fna&_nc_gid=As5S_eIJ9RuUHxAeVwzxKAl&oh=00_AYAAxqdi9l8EjUSwSkkNJduKLPHaU6IP-otliPR3HzZZ-Q&oe=67457B66" alt="Música 1">
+                <img src="https://scontent.fgye1-2.fna.fbcdn.net/v/t39.30808-6/277577461_142171264986203_2575994919977264343_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=57UmxDW5ba8Q7kNvgEGx_U_&_nc_zt=23&_nc_ht=scontent.fgye1-2.fna&_nc_gid=AMvTJiRlKOEwkroWq_n5Ek3&oh=00_AYBUfDEQF4l8ymjPxZ9sqvpV1MObZFLKtwzpazM3kOX5Ww&oe=67455A7E" alt="Música 2">
+                </div>
+                <p>Contrata el mejor sonido y DJ para tu evento, desde fiestas privadas hasta grandes eventos públicos.</p>
+    
+    <!-- Nuevo Combo Box -->
+    <label for="estilo-musica">Elige un estilo de música:</label>
+    <select id="estilo-musica">
+        <option value="">Selecciona un estilo</option>
+        <option value="Pop">Pop</option>
+        <option value="Rock">Rock</option>
+        <option value="Jazz">Jazz</option>
+        <option value="Electrónica">Electrónica</option>
+        <option value="Reggaetón">Reggaetón</option>
+    </select>
+    
+    <button class="btn" onclick="mostrarDetalles('musica')">Más detalles</button>
+    <button class="btn" onclick="agregarMusicaAlPedido()">Agregar al pedido</button>
+
+    <!-- Detalles adicionales de Música -->
+    <div id="musica-detalles" style="display: none;">
+        <p><strong>Opciones:</strong> DJ, bandas en vivo, y más.</p>
+        <p><strong>Precios:</strong> Desde $250 por 4 horas de música continua.</p>
+        <p><strong>Descripción:</strong> Ofrecemos diferentes estilos y configuraciones de música según el tipo de evento.</p>
+    </div>
+</div>
+
+        </section>
+
+        <section class="pedido">
+            <h3>Formulario de Pedido</h3>
+            <form onsubmit="return validarFormulario()">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="cedula">Cédula:</label>
+                <input type="text" id="cedula" name="cedula" required>
+
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+
+                <label for="servicio">Servicio seleccionado:</label>
+                <input type="text" id="servicio" name="servicio" readonly value="">
+
+                <label for="fecha">Fecha del evento:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <div>
+                    <input type="checkbox" id="aceptar" required>
+                    <label for="aceptar">Acepto los términos y condiciones</label>
+                </div>
+                
+                <input type="submit" value="Confirmar Pedido">
+            </form>
+            <div>
+                <h4>Servicios en el pedido (<span id="total-pedido">0</span>)</h4>
+                <ul id="pedido-lista"></ul>
+            </div>
+
+            <!-- Botón para eliminar el pedido -->
+            <button class="btn" onclick="eliminarPedido()">Eliminar Pedido</button>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 EventaPro - Todos los derechos reservados</p>
+    </footer>
+</body>
+</html>  
